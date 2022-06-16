@@ -5,7 +5,7 @@
 
 .icon {
    /* It removes the 'line-height' defined in body. If you don't do that, 
-   it alters the height is small divs */
+   it alters the height of small divs */
    line-height: 0;
 
    &.icon-filter {

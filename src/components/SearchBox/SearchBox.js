@@ -1,6 +1,7 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useContext } from 'react';
 import JobsContext from '../../context/JobsContext';
 import { useForm } from '../../hooks/useForm';
+import { useMatchMedia } from '../../hooks/useMatchMedia';
 import FormInputWrapper from '../FormInputWrapper/FormInputWrapper';
 import FormCheckWrapper from '../FormCheckWrapper/FormCheckWrapper';
 import FormInput from '../FormInput/FormInput';
@@ -46,23 +47,12 @@ const SearchBox = () => {
       }
    };
 
-   // Placeholder
+   /* Placeholder text in 'location' input field and the label of the checkbox
+    * changes depending on the viewport size. useMatchMedia returns true if the
+    *  viewport size is smaller than 850px and false otherwise.
+    */
 
-   const [isSmallScreen, setIsSmallScreen] = useState(
-      window.matchMedia('(max-width: 850px)').matches
-   );
-
-   useEffect(() => {
-      const mediaQueryString = '(max-width: 850px)';
-
-      const mediaQuery = window.matchMedia(mediaQueryString);
-      const updateIsSmallScreen = e => setIsSmallScreen(mediaQuery.matches);
-      mediaQuery.addEventListener('change', updateIsSmallScreen);
-
-      return () => {
-         mediaQuery.removeEventListener('change', updateIsSmallScreen);
-      };
-   }, []);
+   const isSmallScreen = useMatchMedia('(max-width: 850px)');
 
    return (
       <>

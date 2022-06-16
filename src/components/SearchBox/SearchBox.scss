@@ -42,6 +42,20 @@
    }
 }
 
+// Common styles of FormInputWrapper and FormCheckWrapper goes here.
+
+.search-field {
+   &.terms,
+   &.location {
+      flex: 1;
+      @include m.border-(right);
+      input[type='text'] {
+         padding: 5px 0;
+         color: var(--headline-color);
+      }
+   }
+}
+
 // Styles to show and hide regarding mediaqueries
 
 /* prettier-ignore */

@@ -3,19 +3,8 @@
 // Note: styles for showing and hiding all elements inside the component <SerchBox />
 // regarding media queries are in SerchBox.scss file.
 
-.search-field {
-   &.terms,
-   &.location {
-      flex: 1;
-      @include m.border-(right);
-      // @media only screen and (max-width: 900px) {
-      //    flex: 1;
-      // }
-   }
-
-   &.terms {
-      @include m.media-query-mobile {
-         border-right: 0;
-      }
+.search-field.terms {
+   @include m.media-query-mobile {
+      border-right: 0;
    }
 }

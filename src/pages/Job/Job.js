@@ -4,8 +4,6 @@ import { useFetch } from '../../hooks/useFetch';
 import JobDetails from '../../components/JobDetails/JobDetails';
 import Loader from '../../components/Loader/Loader';
 
-import './Job.scss';
-
 const Job = () => {
    let { id: jobId } = useParams();
    const { status, data } = useFetch(`/jobs/${jobId}`);

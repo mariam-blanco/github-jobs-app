@@ -39,18 +39,5 @@ p {
 }
 
 .txt-white {
-   color: $text-white;
-}
-
-.search-field,
-.location-field {
-   input[type='text'] {
-      padding: 5px 0;
-      color: var(--headline-color);
-
-      &::placeholder {
-         font: 16px/26px 'Kumbh Sans', Arial, Helvetica, sans-serif;
-         color: var(--placeholder);
-      }
-   }
+   color: $txt-white;
 }
