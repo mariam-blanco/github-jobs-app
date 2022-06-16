@@ -1,6 +1,8 @@
 {
-  "name": "react-github-jobs-app",
-  "version": "0.1.0",
+  "name": "github-jobs-app",
+  "homepage": "https://react-github-jobs-app.herokuapp.com/",
+  "author": "Mariam Blanco González",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
