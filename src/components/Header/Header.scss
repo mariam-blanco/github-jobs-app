@@ -1,0 +1,8 @@
+@use '../../styles/mixins' as m;
+
+.header {
+  width: 100%;
+  height: 120px;
+  @include m.flex-sp(row);
+  align-items: center;
+}

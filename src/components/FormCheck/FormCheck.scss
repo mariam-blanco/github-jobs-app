@@ -1,0 +1,36 @@
+.checkbox {
+   width: max-content;
+   position: relative;
+   margin-right: 0;
+
+   .check-input {
+      position: absolute;
+      opacity: 0;
+
+      & + span.checkmark {
+         cursor: pointer;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 24px;
+         height: 24px;
+         border-radius: 3px;
+         background-color: var(--form-check-bg);
+      }
+
+      & + span.checkmark:hover {
+         background-color: var(--form-check-hover-bg);
+      }
+
+      &:checked + span.checkmark {
+         background: url(../../images/desktop/icon-check.svg) center no-repeat
+            var(--form-check-checked-bg);
+      }
+   }
+
+   .label {
+      margin-left: 40px;
+      font-weight: 700;
+      color: var(--headline-color);
+   }
+}

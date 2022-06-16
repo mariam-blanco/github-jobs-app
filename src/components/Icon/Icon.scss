@@ -1,0 +1,14 @@
+@use '../../styles/mixins' as m;
+
+// Note: styles for showing and hiding all elements inside the component <SerchBox />
+// regarding media queries are in SerchBox.scss file.
+
+.icon {
+   /* It removes the 'line-height' defined in body. If you don't do that, 
+   it alters the height is small divs */
+   line-height: 0;
+
+   &.icon-filter {
+      margin-right: 14px;
+   }
+}

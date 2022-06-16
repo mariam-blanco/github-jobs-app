@@ -1,0 +1,77 @@
+// Variables
+
+/*  Variables should follow the `$component-state-property-size` formula for
+    consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.  */
+
+// Colors
+
+// gray-color-variables
+$white: #ffffff;
+$grey-200: #f2f2f2; /* $body-bgc */
+$grey-300: #f4f6f8; /* $light-grey */
+$grey-400: #9daec2; /* $grey */
+$grey-500: #6e8098; /* $dark-grey */
+$grey-600: #121721; /* $midnight, $midnight-400 */
+$grey-700: #19202d; /* $dark-blue, $midnight-500 */
+$black: #000000;
+
+$violet-500: #5964e0; /* $violet */
+$violet-400: #939bf4; /* $light-violet, $primary-color-l */
+$violet-300: rgba($violet-500, 0.25); /* rgba($violet-500, 0.25) */
+$violet-200: rgba($violet-500, 0.25); /* rgba($violet-500, 0.25) */
+
+// theme-color-variables
+$primary: $violet-500 !default;
+
+// Body
+
+$body-bg: $grey-200 !default;
+$body-color: $grey-500 !default;
+
+// Links
+
+$link-color: $primary;
+$link-hover-color: $violet-400;
+
+// Border
+
+$border-width: 1px !default;
+$border-color: rgba($grey-500, 0.2); /* $border-color: $grey-blue-500; */
+
+// Typography
+
+$font-family-base: 'Kumbh Sans', Arial, Helvetica, sans-serif;
+$font-size-base: 16px;
+$line-height-base: 26px;
+
+// Buttons
+
+$btn-primary-color: $white;
+$btn-primary-bg: $primary;
+$btn-primary-hover-bg: $violet-400; /* $btn-primary-hover-color: #fff; */
+
+// Forms
+
+$form-check-bg: rgba($grey-700, 0.1);
+$form-check-hover-bg: $violet-300;
+$form-check-checked-bg: $violet-500;
+
+$placeholder: rgba($grey-700, 0.5);
+
+$card-bg: $white;
+
+$text-color: $grey-500;
+$txt-secondary: $grey-500;
+//$details-link-color: $violet;
+$headline-color: $grey-700;
+
+// --- Dark Mode ---------------------- //
+
+$dark-body-bg: $grey-600;
+$dark-body-color: $grey-400;
+$dark-txt-secondary: $grey-500;
+$dark-headline-color: $white;
+$dark-placeholder: rgba($white, 0.5);
+$text-white: $white;
+$dark-card-bg: $grey-700;
+$dark-form-check-bg: rgba($white, 0.1);

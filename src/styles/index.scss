@@ -1,0 +1,56 @@
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+@import 'typography';
+
+/* prettier-ignore */
+:root {
+  --body-bg:                #{$body-bg};
+  --body-color:             #{$body-color};
+  --card-bg:                #{$card-bg};
+  --txt-secondary:          #{$txt-secondary};
+  --headline-color:         #{$headline-color};
+  --placeholder:            #{$placeholder};
+  --form-check-bg:          #{$form-check-bg};
+  --form-check-hover-bg:    #{$form-check-hover-bg};
+  --form-check-checked-bg:  #{$form-check-checked-bg};
+}
+
+/* prettier-ignore */
+[data-theme="dark"] {
+  --body-bg:                #{$dark-body-bg};
+  --body-color:             #{$dark-body-color};
+  --card-bg:                #{$dark-card-bg};
+  --txt-secondary:          #{$dark-txt-secondary};
+  --headline-color:         #{$dark-headline-color};
+  --placeholder:            #{$dark-placeholder};
+  --form-check-bg:          #{$dark-form-check-bg};
+}
+
+body {
+   font-family: $font-family-base;
+   font-size: $font-size-base;
+   line-height: $line-height-base;
+   color: var(--body-color);
+   background-color: var(--body-bg);
+}
+
+// Links
+
+.link {
+   &-title {
+      color: currentcolor;
+
+      &:hover {
+         color: var(--txt-secondary);
+      }
+   }
+
+   &-text {
+      color: $link-color;
+
+      &:hover {
+         color: $link-hover-color;
+      }
+   }
+}

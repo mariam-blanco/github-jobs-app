@@ -1,0 +1,78 @@
+@use '../../styles/mixins' as m;
+
+// Note: styles for showing and hiding all elements inside the component <SerchBox />
+// regarding media queries are in SerchBox.scss file.
+
+.form {
+   width: 100%;
+}
+.search-box {
+   width: 100%;
+   margin-bottom: 80px;
+
+   @include m.flex-sp(row);
+   align-items: center;
+   background-color: var(--card-bg);
+   border-radius: 6px;
+
+   @include m.media-query-tablet {
+      margin-bottom: 70px;
+   }
+
+   @include m.media-query-mobile {
+      margin-bottom: 57px;
+   }
+
+   .search-field,
+   .search-btn-field {
+      height: 80px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 32px;
+      padding-right: 16px;
+
+      @media only screen and (max-width: 900px) {
+         padding-left: 20px;
+      }
+   }
+
+   .search-btn-field {
+      padding-left: 0;
+   }
+}
+
+// Styles to show and hide regarding mediaqueries
+
+/* prettier-ignore */
+.search-box {
+   // Important!!! Nest these classes with '.search-box' as the parent
+   // to differentiate with the same elements inside the '.modal'
+   .location,
+   .type,
+   .search-btn-field {
+      @include m.media-query-mobile {
+         display: none !important;
+      }
+   }
+
+   .terms {
+      .icon-filter, 
+      .btn-sm  { display: none;  }
+         
+      @include m.media-query-mobile {
+         .icon-search { display: none; }  /* the icon inside 'terms' field  */  
+         .icon-filter { display: inline; }
+            
+         .btn-sm, 
+         .btn-sm .icon-search {  /* the icon of the button  */  
+            display: block; 
+         } 
+        
+         .icon-filter {
+           margin-right: 14px;
+         } 
+       }
+   }
+}
+/* prettier-ignore */

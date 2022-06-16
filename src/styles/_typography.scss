@@ -1,0 +1,56 @@
+.h1,
+.h2,
+.h3,
+.h4 {
+   font-weight: 700;
+   color: var(--headline-color);
+}
+
+.h1 {
+   font-size: 28px;
+   line-height: 34px;
+}
+
+.h2 {
+   font-size: 24px;
+   line-height: 29px;
+}
+
+.h3 {
+   font-size: 20px;
+   line-height: 24px;
+}
+
+.h4 {
+   font-size: 14px;
+   line-height: 18px;
+}
+
+p {
+   overflow-wrap: anywhere;
+}
+
+.txt-primary {
+   color: $primary;
+}
+
+.txt-secondary {
+   color: var(--txt-secondary);
+}
+
+.txt-white {
+   color: $text-white;
+}
+
+.search-field,
+.location-field {
+   input[type='text'] {
+      padding: 5px 0;
+      color: var(--headline-color);
+
+      &::placeholder {
+         font: 16px/26px 'Kumbh Sans', Arial, Helvetica, sans-serif;
+         color: var(--placeholder);
+      }
+   }
+}

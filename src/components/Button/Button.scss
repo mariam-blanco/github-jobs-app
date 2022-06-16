@@ -1,0 +1,70 @@
+@use '../../styles/mixins' as m;
+@import '../../styles/variables';
+
+// Note: styles for showing and hiding all elements inside the component <SerchBox />
+// regarding media queries are in SerchBox.scss file.
+
+.btn {
+   width: 147px;
+   height: 48px;
+   border-radius: 5px;
+   font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
+   font-weight: 700;
+   cursor: pointer;
+
+   @media only screen and (max-width: 640px) {
+      width: 100%;
+   }
+
+   &.btn-primary {
+      color: $btn-primary-color;
+      background-color: $btn-primary-bg;
+
+      &:hover {
+         background-color: $btn-primary-hover-bg;
+      }
+   }
+
+   &.btn-secondary {
+      color: $primary;
+      background-color: rgba($primary, 0.1);
+
+      &:hover {
+         background-color: rgba($primary, 0.25);
+      }
+   }
+
+   &.btn-search {
+      width: 123px;
+      color: $btn-primary-color;
+      background-color: $btn-primary-bg;
+
+      &:hover {
+         background-color: $btn-primary-hover-bg;
+      }
+      @media only screen and (max-width: 900px) {
+         width: 80px;
+      }
+   }
+
+   &.btn-icon {
+      width: auto;
+      height: auto;
+      background-color: transparent;
+
+      &:hover {
+         background-color: transparent;
+      }
+   }
+
+   &.btn-sm {
+      width: 48px;
+   }
+}
+
+// 'a' tag with a button inside
+a {
+   @media only screen and (max-width: 640px) {
+      width: 100%;
+   }
+}

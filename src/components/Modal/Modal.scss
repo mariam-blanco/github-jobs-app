@@ -1,0 +1,59 @@
+@use '../../styles/mixins' as m;
+@import '../../styles/variables';
+
+.modal {
+   position: fixed;
+   z-index: 10;
+   left: 0;
+   top: 0;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: auto;
+   background-color: rgba(0, 0, 0, 0.5);
+
+   @media only screen and (min-width: 576px) {
+      display: none;
+   }
+
+   &-container {
+      position: fixed;
+      left: 24px;
+      right: 24px;
+      width: auto;
+      @include m.flex-sp(column);
+      background-color: var(--card-bg);
+
+      & > div {
+         height: 72px;
+      }
+
+      .search-field,
+      .search-btn-field {
+         padding: 24px;
+      }
+
+      .search-field {
+         &.location {
+            @include m.flex-sp(row);
+            align-items: center;
+            @include m.border-(bottom);
+
+            .text-input {
+               margin-left: 16px;
+            }
+         }
+
+         &.type .checkbox {
+            @include m.flex-sp(row);
+            align-items: center;
+         }
+      }
+
+      .search-btn-field {
+         padding-top: 0;
+      }
+   }
+}

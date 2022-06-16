@@ -1,0 +1,11 @@
+@use '../../styles/mixins' as m;
+
+// Note: styles for showing and hiding all elements inside the component <SerchBox />
+// regarding media queries are in SerchBox.scss file.
+
+.search-field {
+   &.type {
+      flex: 0;
+      padding-right: 24px;
+   }
+}

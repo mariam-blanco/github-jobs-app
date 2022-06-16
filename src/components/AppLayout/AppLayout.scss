@@ -1,0 +1,40 @@
+@use '../../styles/mixins' as m;
+
+.bg-container {
+   min-height: 100vh;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   padding: 0 40px;
+   background: url(../../images/desktop/bg-pattern-header.svg);
+   background-repeat: no-repeat;
+   background-size: 100% 162px;
+
+   @include m.media-query-tablet {
+      background: url(../../images/tablet/bg-pattern-header.svg);
+      background-repeat: no-repeat;
+   }
+
+   @include m.media-query-mobile {
+      padding: 0 24px;
+      background: url(../../images/mobile/bg-pattern-header.svg);
+      background-repeat: no-repeat;
+      background-size: 100% 136px;
+   }
+
+   .page-container {
+      width: 100%;
+      max-width: 1110px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+
+      .main {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         flex: 1;
+      }
+   }
+}

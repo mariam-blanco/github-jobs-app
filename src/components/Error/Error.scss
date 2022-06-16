@@ -1,0 +1,26 @@
+// Message
+
+.message {
+   text-align: center;
+}
+
+// Errors
+
+.error {
+   margin-top: 150px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 24px;
+
+   h1 {
+      font-weight: 400;
+      //margin-bottom: 24px;
+   }
+   div {
+      text-align: center;
+   }
+   img {
+      margin-top: 32px;
+   }
+}
