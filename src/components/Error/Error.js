@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import imageNetworkError from '../../images/undraw_online_connection.svg';
 import imageNotFound from '../../images/undraw-publish-article.svg';
 
 import './Error.scss';
-
-// type: NotFound, NetworkError, NoResults
 
 const Error = ({ type }) => {
    const errorType = {
@@ -65,3 +64,7 @@ function NetworkErrorMessage() {
 }
 
 export default Error;
+
+Error.propTypes = {
+   type: PropTypes.oneOf(['notFound', 'networkError', 'noResults']).isRequired,
+};

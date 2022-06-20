@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './Card.scss';
 
 /* prettier-ignore */
-const Card = ({id, position, company, location, postedAt, contract, logo, logoBackground }) => {
+const Card = ({job}) => {
+  
+  const {id, position, company, location, postedAt, contract, logo, logoBackground} = job;
   
   return (
     <div className="card">
@@ -31,3 +34,7 @@ const Card = ({id, position, company, location, postedAt, contract, logo, logoBa
 };
 
 export default Card;
+
+Card.propTypes = {
+   job: PropTypes.object.isRequired,
+};

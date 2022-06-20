@@ -76,7 +76,7 @@ const SearchBox = () => {
                      action={openModal}
                      variant="search"
                      modifier="icon"
-                     label={
+                     icon={
                         <Icon
                            type="filter"
                            fill="#6E8098"
@@ -90,7 +90,7 @@ const SearchBox = () => {
                      type="submit"
                      variant="search"
                      modifier="sm"
-                     label={<Icon type="search" fill="#fff" />}
+                     icon={<Icon type="search" fill="#fff" />}
                   />
                </FormInputWrapper>
 

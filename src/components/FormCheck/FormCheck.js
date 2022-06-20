@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
+
 import './FormCheck.scss';
 
-const FormCheck = ({ name, checked, label, handleChange }) => {
+const FormCheck = ({ name, label, checked, handleChange }) => {
    return (
       <label className="checkbox">
          <input
@@ -17,3 +19,10 @@ const FormCheck = ({ name, checked, label, handleChange }) => {
 };
 
 export default FormCheck;
+
+FormCheck.propTypes = {
+   name: PropTypes.string.isRequired,
+   label: PropTypes.string,
+   checked: PropTypes.bool.isRequired,
+   handleChange: PropTypes.func.isRequired,
+};

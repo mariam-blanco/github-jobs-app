@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import './Icon.scss';
 
 const PATH = {
@@ -25,3 +27,11 @@ const Icon = ({ type, fill, width = '24', height = '24' }) => {
 };
 
 export default Icon;
+
+Icon.propTypes = {
+   type: PropTypes.string.isRequired,
+   // Default value of fill in SVG is #000000
+   fill: PropTypes.string,
+   width: PropTypes.string,
+   height: PropTypes.string,
+};

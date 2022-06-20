@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom'; /* ReactDOM.createPortal needs this import */
+import PropTypes from 'prop-types';
 import { isEmpty } from '../../utils/utils';
 import Button from '../Button/Button';
 import Error from '../Error/Error';
@@ -125,3 +126,7 @@ function PageFooterBg() {
 }
 
 export default JobDetails;
+
+JobDetails.propTypes = {
+   job: PropTypes.object.isRequired,
+};

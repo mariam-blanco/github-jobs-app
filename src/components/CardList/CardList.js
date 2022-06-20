@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { isEmpty } from '../../utils/utils';
 import Card from '../Card/Card';
 import Error from '../Error/Error';
@@ -13,7 +14,7 @@ const CardList = ({ jobs }) => {
       !isEmpty(jobs) && (
          <div className="cards-list">
             {jobs.map(job => (
-               <Card key={job.id} {...job} />
+               <Card key={job.id} job={job} />
             ))}
          </div>
       )
@@ -21,3 +22,7 @@ const CardList = ({ jobs }) => {
 };
 
 export default CardList;
+
+CardList.propTypes = {
+   jobs: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

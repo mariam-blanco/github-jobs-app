@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import './FormInput.scss';
 
 const FormInput = ({ name, value, placeholder, handleChange }) => {
@@ -14,3 +16,10 @@ const FormInput = ({ name, value, placeholder, handleChange }) => {
 };
 
 export default FormInput;
+
+FormInput.propTypes = {
+   name: PropTypes.string.isRequired,
+   value: PropTypes.string.isRequired,
+   placeholder: PropTypes.string,
+   handleChange: PropTypes.func.isRequired,
+};

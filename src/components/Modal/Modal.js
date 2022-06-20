@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import './Modal.scss';
 
 const Modal = ({ isOpen, closeModal, children }) => {
@@ -15,3 +17,8 @@ const Modal = ({ isOpen, closeModal, children }) => {
 };
 
 export default Modal;
+
+Modal.propTypes = {
+   isOpen: PropTypes.bool.isRequired,
+   closeModal: PropTypes.func.isRequired,
+};

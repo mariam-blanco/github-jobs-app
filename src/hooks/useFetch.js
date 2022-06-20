@@ -1,5 +1,6 @@
 import { useEffect, useReducer } from 'react';
 import { useNavigate } from 'react-router';
+import PropTypes from 'prop-types';
 import { getData } from '../services/api';
 
 // Hook personalizado useFetch
@@ -51,4 +52,8 @@ export const useFetch = params => {
    }, [params]);
 
    return state;
+};
+
+useFetch.propTypes = {
+   params: PropTypes.string.isRequired,
 };
