@@ -1,9 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import AppLayout from '../components/AppLayout/AppLayout';
-import Home from '../pages/Home/Home';
-import Job from '../pages/Job/Job';
-import Error from '../components/Error/Error';
+import { AppLayout, Error } from 'components';
+import { Home, Job } from 'pages';
 
 const AppRouter = () => {
    return (

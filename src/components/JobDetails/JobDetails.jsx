@@ -1,12 +1,13 @@
 import ReactDOM from 'react-dom'; /* ReactDOM.createPortal needs this import */
 import PropTypes from 'prop-types';
-import { isEmpty } from '../../utils/utils';
-import Button from '../Button/Button';
-import Error from '../Error/Error';
+import { isEmpty } from 'utils/utils';
+import { Button, Error } from 'components';
 
 import './JobDetails.scss';
 
-const JobDetails = ({ job }) => {
+export const JobDetails = ({ job }) => {
+   console.log(job);
+
    const {
       company,
       logo,
@@ -124,8 +125,6 @@ function PageFooterBg() {
       bgContainer
    );
 }
-
-export default JobDetails;
 
 JobDetails.propTypes = {
    job: PropTypes.object.isRequired,

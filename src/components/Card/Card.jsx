@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Card.scss';
 
 /* prettier-ignore */
-const Card = ({job}) => {
+export const Card = ({job}) => {
   
   const {id, position, company, location, postedAt, contract, logo, logoBackground} = job;
   
@@ -32,8 +32,6 @@ const Card = ({job}) => {
     </div>
   );
 };
-
-export default Card;
 
 Card.propTypes = {
    job: PropTypes.object.isRequired,

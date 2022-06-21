@@ -1,7 +1,7 @@
 import { useEffect, useReducer } from 'react';
 import { useNavigate } from 'react-router';
 import PropTypes from 'prop-types';
-import { getData } from '../services/api';
+import { getData } from 'services/api';
 
 // Hook personalizado useFetch
 // Gestiona el estado con useReduce
@@ -39,6 +39,7 @@ export const useFetch = params => {
 
          try {
             const response = await getData(params);
+            console.log('Hice fetch!!!');
             dispatch({ type: 'fetched', payload: response.data });
          } catch (error) {
             error.response && error.response.status === 404

@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import Switcher from '../Switcher/Switcher';
-import logo from '../../images/desktop/logo.svg';
+import { Switcher } from 'components';
+import logo from 'images/desktop/logo.svg';
 
 import './Header.scss';
 
-const Header = ({ toggleTheme }) => {
+export const Header = ({ toggleTheme }) => {
    return (
       <header className="header">
          <div className="logo">
@@ -18,5 +18,3 @@ const Header = ({ toggleTheme }) => {
       </header>
    );
 };
-
-export default Header;

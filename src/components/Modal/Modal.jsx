@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import './Modal.scss';
 
-const Modal = ({ isOpen, closeModal, children }) => {
+export const Modal = ({ isOpen, closeModal, children }) => {
    if (!isOpen) return null; // if modal is not open, return null
 
    const handleClose = e => {
@@ -15,8 +15,6 @@ const Modal = ({ isOpen, closeModal, children }) => {
       </div>
    );
 };
-
-export default Modal;
 
 Modal.propTypes = {
    isOpen: PropTypes.bool.isRequired,

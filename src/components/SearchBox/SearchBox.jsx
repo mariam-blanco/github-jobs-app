@@ -1,18 +1,19 @@
 import { useState, useContext } from 'react';
-import JobsContext from '../../context/JobsContext';
-import { useForm } from '../../hooks/useForm';
-import { useMatchMedia } from '../../hooks/useMatchMedia';
-import FormInputWrapper from '../FormInputWrapper/FormInputWrapper';
-import FormCheckWrapper from '../FormCheckWrapper/FormCheckWrapper';
-import FormInput from '../FormInput/FormInput';
-import FormCheck from '../FormCheck/FormCheck';
-import Icon from '../Icon/Icon';
-import Button from '../Button/Button';
-import Modal from '../Modal/Modal';
+import { JobsContext } from 'context';
+import { useForm, useMatchMedia } from 'hooks';
+import {
+   FormInputWrapper,
+   FormCheckWrapper,
+   FormInput,
+   FormCheck,
+   Button,
+   Icon,
+   Modal,
+} from 'components';
 
 import './SearchBox.scss';
 
-const SearchBox = () => {
+export const SearchBox = () => {
    const initialState = {
       terms: '',
       location: '',
@@ -165,5 +166,3 @@ const SearchBox = () => {
       </>
    );
 };
-
-export default SearchBox;

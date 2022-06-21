@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
+import { Header } from 'components';
 
 import './AppLayout.scss';
 
-const AppLayout = () => {
+export const AppLayout = () => {
    return (
       <div className="bg-container">
          <div className="page-container">
@@ -15,5 +15,3 @@ const AppLayout = () => {
       </div>
    );
 };
-
-export default AppLayout;

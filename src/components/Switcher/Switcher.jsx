@@ -1,5 +1,5 @@
-import iconSun from '../../images/desktop/icon-sun.svg';
-import iconMoon from '../../images/desktop/icon-moon.svg';
+import iconSun from 'images/desktop/icon-sun.svg';
+import iconMoon from 'images/desktop/icon-moon.svg';
 
 import './Switcher.scss';
 
@@ -11,7 +11,7 @@ import './Switcher.scss';
  *  3.- In index.scss, we define custom properties with the values of each theme on the :root pseudo-class.
  */
 
-const Switcher = () => {
+export const Switcher = () => {
    const handleChange = ({ target }) => {
       /* If the attribute already exists, the value is updated; 
         otherwise a new attribute is added with the specified name and value.*/
@@ -36,5 +36,3 @@ const Switcher = () => {
       </div>
    );
 };
-
-export default Switcher;

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import './FormInput.scss';
 
-const FormInput = ({ name, value, placeholder, handleChange }) => {
+export const FormInput = ({ name, value, placeholder, handleChange }) => {
    return (
       <input
          className="text-input"
@@ -14,8 +14,6 @@ const FormInput = ({ name, value, placeholder, handleChange }) => {
       />
    );
 };
-
-export default FormInput;
 
 FormInput.propTypes = {
    name: PropTypes.string.isRequired,

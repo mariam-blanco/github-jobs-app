@@ -1,12 +1,10 @@
 import { useContext } from 'react';
-import JobsContext from '../../context/JobsContext';
-import SearchBox from '../../components/SearchBox/SearchBox';
-import CardList from '../../components/CardList/CardList';
-import Loader from '../../components/Loader/Loader';
+import { JobsContext } from 'context';
+import { SearchBox, CardList, Loader } from 'components';
 
 import './Home.scss';
 
-const Home = () => {
+export const Home = () => {
    const { status, jobs } = useContext(JobsContext);
 
    /* prettier-ignore */
@@ -18,5 +16,3 @@ const Home = () => {
       </>
    );
 };
-
-export default Home;

@@ -1,5 +1,3 @@
 import { createContext } from 'react';
 
-const JobsContext = createContext(null);
-
-export default JobsContext;
+export const JobsContext = createContext(null);

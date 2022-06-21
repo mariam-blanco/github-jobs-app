@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import './Button.scss';
 
-const Button = ({
+export const Button = ({
    type = 'button',
    name,
    variant,
@@ -26,7 +26,7 @@ const Button = ({
    );
 };
 
-export default Button;
+//export default Button;
 
 Button.propTypes = {
    type: PropTypes.string,
