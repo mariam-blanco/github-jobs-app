@@ -1,27 +1,19 @@
-// Message
-
-.message {
-   text-align: center;
-}
-
-// Errors
-
 .error {
-   margin-top: 150px;
+   margin-top: 120px;
    display: flex;
    flex-direction: column;
    align-items: center;
    gap: 24px;
 
-   h1 {
+   &-title {
       font-weight: 400;
    }
 
-   div {
+   &-message {
       text-align: center;
    }
 
-   img {
+   &-image {
       margin-top: 32px;
    }
 }

@@ -1,19 +1,22 @@
 @use '../../styles/mixins' as m;
 
 .cards-list {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(327px, 1fr));
-  column-gap: 3%;
-  row-gap: 65px;
-  margin-bottom: 42px;
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(327px, 1fr));
+   column-gap: 3%;
+   row-gap: 65px;
+   margin-top: 80px;
+   margin-bottom: 42px;
 
-  @include m.media-query-tablet {
-    column-gap: 2%;
-    row-gap: 49px;
-  }
-  @include m.media-query-mobile {
-    display: flex;
-    flex-direction: column;
-  }
+   @include m.media-query-tablet {
+      column-gap: 2%;
+      row-gap: 49px;
+      margin-top: 70px;
+   }
+   @include m.media-query-mobile {
+      display: flex;
+      flex-direction: column;
+      margin-top: 57px;
+   }
 }

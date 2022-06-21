@@ -8,20 +8,11 @@
 }
 .search-box {
    width: 100%;
-   margin-bottom: 80px;
 
    @include m.flex-sp(row);
    align-items: center;
    background-color: var(--card-bg);
    border-radius: 6px;
-
-   @include m.media-query-tablet {
-      margin-bottom: 70px;
-   }
-
-   @include m.media-query-mobile {
-      margin-bottom: 57px;
-   }
 
    .search-field,
    .search-btn-field {

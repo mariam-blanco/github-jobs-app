@@ -6,18 +6,14 @@ import Error from '../Error/Error';
 import './CardList.scss';
 
 const CardList = ({ jobs }) => {
-   if (isEmpty(jobs)) {
-      return <Error type="notFound" />;
-   }
-
+   /* prettier-ignore */
    return (
-      !isEmpty(jobs) && (
-         <div className="cards-list">
-            {jobs.map(job => (
-               <Card key={job.id} job={job} />
-            ))}
-         </div>
-      )
+      !isEmpty(jobs) 
+         ? ( <div className="cards-list">
+               { jobs.map(job => <Card key={job.id} job={job} />) }   
+           </div> )
+         
+         : <Error type="notFound" />
    );
 };
 
