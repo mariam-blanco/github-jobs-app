@@ -12,7 +12,7 @@ export const CardList = ({ jobs }) => {
                { jobs.map(job => <Card key={job.id} job={job} />) }   
            </div> )
          
-         : <Error type="notFound" />
+         : <Error type="noResults" />
    );
 };
 

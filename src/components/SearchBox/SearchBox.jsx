@@ -14,20 +14,18 @@ import {
 import './SearchBox.scss';
 
 export const SearchBox = () => {
-   const initialState = {
+   const [search, handleChange, reset] = useForm({
       terms: '',
       location: '',
       isFullTime: false,
-   };
+   });
 
-   const [search, handleChange, reset] = useForm(initialState);
    const { terms, location, isFullTime } = search;
 
    const { handleSearch } = useContext(JobsContext);
 
    // Modal
    const [isOpen, setIsOpen] = useState(false);
-
    const openModal = () => setIsOpen(true);
    const closeModal = () => setIsOpen(false);
 
@@ -41,7 +39,7 @@ export const SearchBox = () => {
          handleSearch({
             terms: terms.toLowerCase(),
             location: location.toLowerCase(),
-            isFullTime: false,
+            isFullTime,
          });
 
          reset(); // reset() must be inside code block
