@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'https://server-github-jobs-production.up.railway.app',
-  withCredentials: false,
-  headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json'
-  }
+   baseURL: 'https://server-github-jobs.vercel.app',
+   withCredentials: false,
+   headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+   }
 });
 
 export const getData = (params) => apiClient.get(params);
